@@ -24,7 +24,7 @@ import CategoryHero from "@/components/categoryHero";
 import ProductCard from "@/components/productCard";
 import FilterPanel from "@/components/filterPanel";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFilterList } from '@awesome.me/kit-610837e1f9/icons/classic/solid';
+import { faFilter } from '@fortawesome/free-solid-svg-icons';
 import { jsonToHTML } from '@contentstack/utils';
 import { useDataContext, usePlpCommercePrefetch } from "@/context/data.context";
 import { plpReferences } from "@/helpers/referencePaths";
@@ -575,7 +575,7 @@ export default function PLP() {
           onClick={() => setFilterPanelOpen(true)}
           className={`fixed ${(process.env.LIVE_PREVIEW_ENABLED) ? "bottom-16" : "bottom-8"} right-8 z-50 bg-white hover:bg-gray-50 text-gray-800 font-medium px-6 py-4 rounded-full shadow-lg border border-gray-400 flex items-center gap-2 transition-all duration-200 hover:shadow-xl ${filterPanelOpen ? "hidden" : ""}`}
         >
-          <FontAwesomeIcon icon={faFilterList} />
+          <FontAwesomeIcon icon={faFilter} />
           <span className="uppercase tracking-wide text-[0.8rem] font-light">Filters and Sorting</span>
         </button>
       )}

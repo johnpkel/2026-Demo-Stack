@@ -9,12 +9,12 @@ import IconGrid from '@/components/mobile/iconGrid';
 import { ContentstackClient } from "@/lib/contentstack-client"
 import { setPersonalizeLiveAttributesCookie } from '@/lib/cspersonalize';
 import { createClient } from '@/utils/supabase/client';
-import { faUser } from '@awesome.me/kit-610837e1f9/icons/classic/light';
 import {
   faBars,
   faCheck,
   faUser as loggedIn,
-} from '@awesome.me/kit-610837e1f9/icons/classic/solid';
+} from '@fortawesome/free-solid-svg-icons';
+import { faUser } from '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   Popover,

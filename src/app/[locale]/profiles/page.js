@@ -3,7 +3,7 @@ import Header from "@/components/header";
 import { useState, useEffect } from 'react';
 import { ContentstackClient } from '@/lib/contentstack-client'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCircleUser, faTrash, faPlus, faCheck } from "@awesome.me/kit-610837e1f9/icons/classic/solid";
+import { faCircleUser, faTrash, faPlus, faCheck } from "@fortawesome/free-solid-svg-icons";
 import { useParams } from 'next/navigation';
 import { createClient } from '@/utils/supabase/client';
 import { setPersonalizeLiveAttributesCookie } from '@/lib/cspersonalize';

@@ -6,7 +6,7 @@ import Header from "@/components/header";
 import { jsonToHtml } from "@contentstack/json-rte-serializer";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLocationDot, faUser, faCalendar } from "@awesome.me/kit-610837e1f9/icons/classic/light";
+import { faLocationDot, faUser, faCalendar } from "@fortawesome/free-solid-svg-icons";
 import { useParams } from "next/navigation";
 import { useDataContext } from "@/context/data.context";
 // import { useJstag } from "@/context/lyticsTracking";

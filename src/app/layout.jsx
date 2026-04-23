@@ -1,6 +1,5 @@
 import { cache } from "react";
 import "./globals.css";
-import Script from 'next/script';
 import { LyticsTracking } from "@/context/lyticsTracking";
 import AppWrapper from "@/components/appWrapper";
 import {
@@ -154,10 +153,6 @@ export default async function RootLayout({
   
   return (
     <html lang={locale}>
-      <Script
-        src="https://kit.fontawesome.com/d480817398.js"
-        crossOrigin="anonymous"
-      />
       <style
           precedence="default"
           href="dynamic-font-rules"
