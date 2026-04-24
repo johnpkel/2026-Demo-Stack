@@ -9,14 +9,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLocationDot, faUser, faCalendar } from "@fortawesome/free-solid-svg-icons";
 import { useParams } from "next/navigation";
 import { useDataContext } from "@/context/data.context";
-// import { useJstag } from "@/context/lyticsTracking";
+import { useJstag } from "@/context/lyticsTracking";
 
 export default function Page({ }) {
     const [entry, setEntry] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     const params = useParams();
     const initialData = useDataContext();
-    //const jstag = useJstag();
+    const jstag = useJstag();
 
     const getContent = async () => {
         const entry = await ContentstackClient.getElementByUrl(
@@ -34,6 +34,12 @@ export default function Page({ }) {
         ContentstackClient.onEntryChange(getContent);
     }, []);
 
+    useEffect(() => {
+        if (entry && entry?.taxonomies?.[0]) {
+            jstag.send({taxonomy: entry?.taxonomies[0]?.term_uid});
+        }
+    },[entry]);
+
     if (isLoading) 
         return;
 
@@ -45,7 +51,6 @@ export default function Page({ }) {
     return (
         <div>
             <Header locale={params.locale} />
-
             <div className="bg-white px-6 pt-8 pb-32 lg:px-8">
                 <div className="mx-auto max-w-3xl text-base leading-7 text-neutral-700">
                     <p className="mb-6 text-sm font-semibold leading-7 text-cyan-600 uppercase">
