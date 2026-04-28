@@ -5,11 +5,11 @@ import StudioHero from "./components/StudioHero";
 // Register the Studio Hero component
 registerComponents([
   {
-    type: "studio-hero",
+    type: "studio-promo",
     component: StudioHero,
-    displayName: "Hero Section",
+    displayName: "Promo",
     description:
-      "A customizable hero section with background image, text content, and call-to-action button",
+      "A customizable Promo sectionwith background image, text content, and call-to-action button",
     props: {
       // Content Group
       headline: {
