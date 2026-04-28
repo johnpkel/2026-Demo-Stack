@@ -10,6 +10,7 @@ import { faLocationDot, faUser, faCalendar } from "@fortawesome/free-solid-svg-i
 import { useParams } from "next/navigation";
 import { useDataContext } from "@/context/data.context";
 import { useJstag } from "@/context/lyticsTracking";
+import { StudioPageWithUidRenderer } from "@/studio/studio-renderer";
 
 export default function Page({ }) {
     const [entry, setEntry] = useState({});
@@ -132,7 +133,7 @@ export default function Page({ }) {
                     }
                 </div>
             </div>
-
+                <StudioPageWithUidRenderer uid="new_hero" />
             <Footer />
         </div>
     );
