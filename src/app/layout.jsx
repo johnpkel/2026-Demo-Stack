@@ -2,6 +2,8 @@ import { cache } from "react";
 import "./globals.css";
 import { LyticsTracking } from "@/context/lyticsTracking";
 import AppWrapper from "@/components/appWrapper";
+import "../studio/index";
+
 import {
   Cinzel,
   Cormorant,
